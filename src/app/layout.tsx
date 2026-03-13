@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Taste of Art — A HUGLIFE Experience",
-  description: "Where art and nightlife collide.",
+  description: "Where art and nightlife collide. Canvas, cuisine, and culture in one frame.",
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
