@@ -30,7 +30,7 @@ export default function Page() {
       <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,padding:'24px clamp(20px,4vw,60px)',display:'flex',justifyContent:'space-between',alignItems:'center',background:'linear-gradient(180deg,rgba(17,17,20,.92) 0%,transparent 100%)'}}>
         <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(16px,1.8vw,24px)',fontWeight:600,letterSpacing:'.08em',color:C.a1}}>TASTE OF ART</span>
         <div className="nl" style={{display:'flex',gap:'clamp(16px,2vw,32px)',alignItems:'center'}}>
-          {['Experience','Gallery','Tickets'].map(l=><a key={l} href={`#${l.toLowerCase()}`} style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'.25em',textTransform:'uppercase',color:'rgba(244,239,229,.4)',textDecoration:'none'}}>{l}</a>)}
+          {['Experience','Tickets'].map(l=><a key={l} href={`#${l.toLowerCase()}`} style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'.25em',textTransform:'uppercase',color:'rgba(244,239,229,.4)',textDecoration:'none'}}>{l}</a>)}
           <a href="#tickets" className="bp" style={{padding:'10px 24px',fontSize:9}}>Tickets</a>
         </div>
       </nav>
@@ -90,29 +90,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* GALLERY — editorial masonry, not repetitive grid */}
-      <section id="gallery" style={{position:'relative',padding:'120px clamp(24px,5vw,80px)',overflow:'hidden'}}>
-        <div className="sbg" style={{backgroundImage:'url(/flyer6.png)',backgroundPosition:'center',backgroundSize:'50%',opacity:.06,filter:'brightness(.25) saturate(.4)'}}/>
-        <div style={{maxWidth:1400,margin:'0 auto',position:'relative',zIndex:1}}>
-          <div className="r"><h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,6vw,80px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:16}}>THE <span style={{color:C.a1,fontWeight:600}}>ARCHIVE</span></h2>
-          <p style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:'.3em',textTransform:'uppercase',color:'rgba(181,138,71,.4)',marginBottom:64}}>Campaign Collection · 2025–2026</p></div>
-          {/* Row 1: hero feature left + two stacked right */}
-          <div className="r d1" style={{display:'grid',gridTemplateColumns:'1.4fr 1fr',gap:4,marginBottom:4}}>
-            <div style={{aspectRatio:'3/4',overflow:'hidden',position:'relative',background:'#0A0A0D'}}>
-              <img src="/flyer1.png" alt="Taste of Art Main" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .8s cubic-bezier(0.16,1,0.3,1)',filter:'brightness(.9)'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.03)'} onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}/>
-              <div style={{position:'absolute',bottom:0,left:0,right:0,padding:'48px 24px 20px',background:'linear-gradient(transparent,rgba(0,0,0,.7))'}}><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',textTransform:'uppercase',color:C.a1}}>Featured Campaign</div></div>
-            </div>
-            <div style={{display:'grid',gridTemplateRows:'1fr 1fr',gap:4}}>
-              <div style={{overflow:'hidden',position:'relative',background:'#0A0A0D'}}><img src="/flyer2.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.85)'}}/></div>
-              <div style={{overflow:'hidden',position:'relative',background:'#0A0A0D'}}><img src="/flyer3.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.85)'}}/></div>
-            </div>
-          </div>
-          {/* Row 2: three equal but landscape-cropped */}
-          <div className="r d2" style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:4}}>
-            {['/flyer4.png','/flyer5.png','/flyer6.png'].map((s,i)=><div key={i} style={{aspectRatio:'4/3',overflow:'hidden',position:'relative',background:'#0A0A0D'}}><img src={s} alt="" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'top center',transition:'transform .8s cubic-bezier(0.16,1,0.3,1)',filter:'brightness(.85)'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.04)'} onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}/><div style={{position:'absolute',bottom:0,left:0,right:0,padding:'32px 16px 12px',background:'linear-gradient(transparent,rgba(0,0,0,.6))'}}><div style={{fontFamily:"'DM Mono',monospace",fontSize:7,letterSpacing:'.35em',textTransform:'uppercase',color:'rgba(181,138,71,.5)'}}>{['Spring Series','Summer Edition','Art Basel'][i]}</div></div></div>)}
-          </div>
-        </div>
-      </section>
+      {/* GALLERY REMOVED */}
 
       {/* TICKETS — logo as BG */}
       <section id="tickets" style={{position:'relative',padding:'140px clamp(24px,5vw,80px)',overflow:'hidden'}}>
@@ -129,7 +107,7 @@ export default function Page() {
       <footer style={{background:'#0A0A0D',borderTop:'1px solid rgba(167,92,67,.08)',padding:'56px clamp(24px,5vw,80px) 36px'}}>
         <div className="fg" style={{maxWidth:1400,margin:'0 auto',display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:40}}>
           <div><div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:28,fontWeight:600,color:C.a1}}>TASTE OF ART</div><p style={{fontSize:12,color:'rgba(244,239,229,.35)',marginTop:8,lineHeight:1.7}}>A KHG HugLife Event. Art meets appetite.</p></div>
-          <div><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',color:C.a1,marginBottom:16}}>EVENT</div>{['Experience','Gallery','Tickets'].map(l=><div key={l} style={{fontSize:12,color:'rgba(244,239,229,.35)',marginBottom:8}}>{l}</div>)}</div>
+          <div><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',color:C.a1,marginBottom:16}}>EVENT</div>{['Experience','Tickets'].map(l=><div key={l} style={{fontSize:12,color:'rgba(244,239,229,.35)',marginBottom:8}}>{l}</div>)}</div>
           <div><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',color:C.a1,marginBottom:16}}>CONNECT</div>{['@just.huglife','404.819.9609'].map(l=><div key={l} style={{fontSize:12,color:'rgba(244,239,229,.35)',marginBottom:8}}>{l}</div>)}</div>
         </div>
         <div style={{maxWidth:1400,margin:'24px auto 0',paddingTop:20,borderTop:'1px solid rgba(167,92,67,.06)',fontSize:10,fontFamily:"'DM Mono',monospace",color:'rgba(244,239,229,.15)'}}>© 2026 Taste of Art. A KHG Enterprise.</div>
