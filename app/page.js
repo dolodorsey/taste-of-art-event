@@ -37,7 +37,7 @@ export default function Page() {
 
       {/* HERO — flyer1 as BG, transparent logo large */}
       <section ref={h} className="hw" style={{position:'relative',width:'100%',height:'100vh',overflow:'hidden',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
-        <div className="sbg" style={{backgroundImage:'url(/flyer1.png)',opacity:.07,filter:'brightness(.22) saturate(.5)'}}/>
+        <div className="sbg" style={{backgroundImage:'url(/flyer1.png)',opacity:.14,filter:'brightness(.35) saturate(.5)'}}/>
         <div style={{position:'absolute',inset:0,background:`radial-gradient(ellipse at 50% 40%,rgba(167,92,67,.2) 0%,${C.bg} 65%)`,zIndex:1}}/>
         <div style={{position:'absolute',inset:0,background:`linear-gradient(180deg,transparent 0%,rgba(17,17,20,.5) 70%,${C.bg} 100%)`,zIndex:2}}/>
         <div className="hl" style={{position:'relative',zIndex:3}}><img src="/logo.png" alt="Taste of Art" style={{width:'min(55vw,500px)',height:'auto',filter:'drop-shadow(0 0 60px rgba(167,92,67,.25))'}}/></div>
@@ -50,7 +50,7 @@ export default function Page() {
 
       {/* THESIS — flyer2 scattered BG right */}
       <section id="experience" style={{position:'relative',padding:'140px clamp(24px,5vw,80px)',overflow:'hidden'}}>
-        <div className="sbg" style={{backgroundImage:'url(/flyer2.png)',backgroundPosition:'90% center',backgroundSize:'40%',opacity:.055,filter:'brightness(.22) saturate(.4)'}}/>
+        <div className="sbg" style={{backgroundImage:'url(/flyer2.png)',backgroundPosition:'90% center',backgroundSize:'40%',opacity:.13,filter:'brightness(.35) saturate(.4)'}}/>
         <div className="dg" style={{maxWidth:1400,margin:'0 auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:80,alignItems:'center',position:'relative',zIndex:1}}>
           <div className="r">
             <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'.4em',textTransform:'uppercase',color:C.a1,marginBottom:24}}>The Concept</div>
@@ -67,7 +67,7 @@ export default function Page() {
 
       {/* EXPERIENCE GRID — flyer4 scattered BG left */}
       <section style={{position:'relative',background:'#0E0E11',padding:'120px clamp(24px,5vw,80px)',overflow:'hidden'}}>
-        <div className="sbg" style={{backgroundImage:'url(/flyer4.png)',backgroundPosition:'5% center',backgroundSize:'35%',opacity:.05,filter:'brightness(.2) saturate(.4)'}}/>
+        <div className="sbg" style={{backgroundImage:'url(/flyer4.png)',backgroundPosition:'5% center',backgroundSize:'35%',opacity:.12,filter:'brightness(.35) saturate(.4)'}}/>
         <div style={{maxWidth:1400,margin:'0 auto',position:'relative',zIndex:1}}>
           <div className="r"><h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,6vw,80px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:64}}>THE <span style={{color:C.a1,fontWeight:600}}>EXPERIENCE</span></h2></div>
           <div className="dg" style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:2,background:'rgba(167,92,67,.08)'}}>
@@ -82,7 +82,7 @@ export default function Page() {
 
       {/* CINEMATIC BREAK — flyer5 full bleed */}
       <section style={{position:'relative',height:'70vh',overflow:'hidden'}}>
-        <img src="/flyer5.png" alt="" style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.3) saturate(.6)'}}/>
+        <img src="/flyer5.png" alt="" style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.4) saturate(.6)'}}/>
         <div style={{position:'absolute',inset:0,background:'linear-gradient(180deg,rgba(17,17,20,.8) 0%,rgba(17,17,20,.2) 40%,rgba(17,17,20,.8) 100%)'}}/>
         <div className="r" style={{position:'relative',zIndex:1,height:'100%',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',textAlign:'center'}}>
           <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,6vw,72px)',fontWeight:300,color:C.light,lineHeight:.95}}>Art Is Meant<br/>To Be <span style={{fontWeight:600,color:C.a1}}>Experienced</span></h2>
@@ -90,20 +90,33 @@ export default function Page() {
         </div>
       </section>
 
-      {/* GALLERY — flyer6 as BG, individual flyer cards scattered */}
+      {/* GALLERY — editorial masonry, not repetitive grid */}
       <section id="gallery" style={{position:'relative',padding:'120px clamp(24px,5vw,80px)',overflow:'hidden'}}>
-        <div className="sbg" style={{backgroundImage:'url(/flyer6.png)',backgroundPosition:'center',backgroundSize:'50%',opacity:.04,filter:'brightness(.2) saturate(.4)'}}/>
+        <div className="sbg" style={{backgroundImage:'url(/flyer6.png)',backgroundPosition:'center',backgroundSize:'50%',opacity:.06,filter:'brightness(.25) saturate(.4)'}}/>
         <div style={{maxWidth:1400,margin:'0 auto',position:'relative',zIndex:1}}>
-          <div className="r"><h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,6vw,80px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:64}}>GALLERY</h2></div>
-          <div className="r d1 dg" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:4}}>
-            {['/flyer1.png','/flyer2.png','/flyer3.png','/flyer4.png','/flyer5.png','/flyer6.png'].map((s,i)=><div key={i} style={{aspectRatio:'3/4',overflow:'hidden',background:'#0A0A0D'}}><img src={s} alt="" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .8s cubic-bezier(0.16,1,0.3,1)',filter:'brightness(.85)'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.04)'} onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}/></div>)}
+          <div className="r"><h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,6vw,80px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:16}}>THE <span style={{color:C.a1,fontWeight:600}}>ARCHIVE</span></h2>
+          <p style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:'.3em',textTransform:'uppercase',color:'rgba(181,138,71,.4)',marginBottom:64}}>Campaign Collection · 2025–2026</p></div>
+          {/* Row 1: hero feature left + two stacked right */}
+          <div className="r d1" style={{display:'grid',gridTemplateColumns:'1.4fr 1fr',gap:4,marginBottom:4}}>
+            <div style={{aspectRatio:'3/4',overflow:'hidden',position:'relative',background:'#0A0A0D'}}>
+              <img src="/flyer1.png" alt="Taste of Art Main" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .8s cubic-bezier(0.16,1,0.3,1)',filter:'brightness(.9)'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.03)'} onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}/>
+              <div style={{position:'absolute',bottom:0,left:0,right:0,padding:'48px 24px 20px',background:'linear-gradient(transparent,rgba(0,0,0,.7))'}}><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',textTransform:'uppercase',color:C.a1}}>Featured Campaign</div></div>
+            </div>
+            <div style={{display:'grid',gridTemplateRows:'1fr 1fr',gap:4}}>
+              <div style={{overflow:'hidden',position:'relative',background:'#0A0A0D'}}><img src="/flyer2.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.85)'}}/></div>
+              <div style={{overflow:'hidden',position:'relative',background:'#0A0A0D'}}><img src="/flyer3.png" alt="" style={{width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.85)'}}/></div>
+            </div>
+          </div>
+          {/* Row 2: three equal but landscape-cropped */}
+          <div className="r d2" style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:4}}>
+            {['/flyer4.png','/flyer5.png','/flyer6.png'].map((s,i)=><div key={i} style={{aspectRatio:'4/3',overflow:'hidden',position:'relative',background:'#0A0A0D'}}><img src={s} alt="" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'top center',transition:'transform .8s cubic-bezier(0.16,1,0.3,1)',filter:'brightness(.85)'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.04)'} onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}/><div style={{position:'absolute',bottom:0,left:0,right:0,padding:'32px 16px 12px',background:'linear-gradient(transparent,rgba(0,0,0,.6))'}}><div style={{fontFamily:"'DM Mono',monospace",fontSize:7,letterSpacing:'.35em',textTransform:'uppercase',color:'rgba(181,138,71,.5)'}}>{['Spring Series','Summer Edition','Art Basel'][i]}</div></div></div>)}
           </div>
         </div>
       </section>
 
       {/* TICKETS — logo as BG */}
       <section id="tickets" style={{position:'relative',padding:'140px clamp(24px,5vw,80px)',overflow:'hidden'}}>
-        <div className="sbg" style={{backgroundImage:'url(/logo.png)',backgroundPosition:'center',backgroundSize:'35%',opacity:.05,filter:'brightness(.3)'}}/>
+        <div className="sbg" style={{backgroundImage:'url(/logo.png)',backgroundPosition:'center',backgroundSize:'35%',opacity:.12,filter:'brightness(.4)'}}/>
         <div style={{position:'absolute',inset:0,background:`radial-gradient(ellipse at 50% 50%,rgba(167,92,67,.15) 0%,transparent 60%)`}}/>
         <div className="r" style={{maxWidth:720,margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
           <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(40px,7vw,100px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:24}}>GET YOUR<br/><span style={{color:C.a1,fontWeight:600}}>TICKETS</span></h2>
