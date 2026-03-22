@@ -31,7 +31,7 @@ export default function Page() {
         <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(16px,1.8vw,24px)',fontWeight:600,letterSpacing:'.08em',color:C.a1}}>TASTE OF ART</span>
         <div className="nl" style={{display:'flex',gap:'clamp(16px,2vw,32px)',alignItems:'center'}}>
           {['Experience','Tickets'].map(l=><a key={l} href={`#${l.toLowerCase()}`} style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'.25em',textTransform:'uppercase',color:'rgba(244,239,229,.4)',textDecoration:'none'}}>{l}</a>)}
-          <a href="#tickets" className="bp" style={{padding:'10px 24px',fontSize:9}}>Tickets</a>
+          <a href="#tickets" className="bp" style={{padding:'10px 24px',fontSize:9}}>TICKETS →</a>
         </div>
       </nav>
 
@@ -45,7 +45,7 @@ export default function Page() {
           <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(20px,3vw,36px)',fontWeight:300,letterSpacing:'.08em',color:C.light}}>A Night of Art, Elegance & Social Energy</h1>
           <p style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:'.5em',textTransform:'uppercase',color:'rgba(167,92,67,.7)',marginTop:8}}>Atlanta · Saturday · April 18th</p>
         </div>
-        <div className="hc" style={{position:'relative',zIndex:3,marginTop:40}}><a href="#tickets" className="bp">Get Tickets</a></div>
+        <div className="hc" style={{position:'relative',zIndex:3,marginTop:40}}><a href="#tickets" className="bp">TICKETS →</a></div>
       </section>
 
       {/* THESIS — flyer2 scattered BG right */}
@@ -99,7 +99,7 @@ export default function Page() {
         <div className="r" style={{maxWidth:720,margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
           <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(40px,7vw,100px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:24}}>GET YOUR<br/><span style={{color:C.a1,fontWeight:600}}>TICKETS</span></h2>
           <p style={{fontSize:15,lineHeight:1.8,color:'rgba(244,239,229,.45)',maxWidth:440,margin:'0 auto 44px'}}>An elevated evening. Limited capacity.</p>
-          <a href="https://huglife.vercel.app/#tickets" target="_blank" rel="noopener noreferrer" className="bp" style={{padding:'20px 64px',fontSize:11}}>Buy Tickets →</a>
+          <a href="https://www.eventbrite.com/e/taste-of-art-canvas-cuisine-culture-tickets-1985661188066" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" className="bp" style={{padding:'20px 64px',fontSize:11}}>TICKETS →</a>
           <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:'rgba(181,138,71,.3)',letterSpacing:'.2em',marginTop:16}}>404.819.9609 · @dbs.tark</div>
         </div>
       </section>
