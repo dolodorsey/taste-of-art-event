@@ -99,7 +99,7 @@ export default function Page() {
         <div className="r" style={{maxWidth:720,margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
           <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(40px,7vw,100px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:24}}>GET YOUR<br/><span style={{color:C.a1,fontWeight:600}}>TICKETS</span></h2>
           <p style={{fontSize:15,lineHeight:1.8,color:'rgba(244,239,229,.45)',maxWidth:440,margin:'0 auto 44px'}}>An elevated evening. Limited capacity.</p>
-          <a href="https://www.eventbrite.com/e/taste-of-art-canvas-cuisine-culture-tickets-1985661188066" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" className="bp" style={{padding:'20px 64px',fontSize:11}}>TICKETS →</a>
+          <a href="https://www.eventbrite.com/e/taste-of-art-canvas-cuisine-culture-tickets-1985661188066" target="_blank" rel="noopener noreferrer" className="bp" style={{padding:'20px 64px',fontSize:11}}>TICKETS →</a>
           <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:'rgba(181,138,71,.3)',letterSpacing:'.2em',marginTop:16}}>404.819.9609 · @dbs.tark</div>
         </div>
       </section>
