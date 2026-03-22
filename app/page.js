@@ -10,7 +10,7 @@ export default function Page() {
   }, []);
   const C = { bg: '#111114', light: '#F4EFE5', a1: '#A75C43', a2: '#6A2730', gold: '#B58A47' };
   return (
-    <div style={{background:C.bg,color:C.light,fontFamily:"'DM Sans',sans-serif"}}>
+    <div style={{background:C.bg,color:C.light,fontFamily:"'DM Sans',sans-serif",overflowX:'hidden'}}>
       <style dangerouslySetInnerHTML={{__html:`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
         *{margin:0;padding:0;box-sizing:border-box}
@@ -105,7 +105,7 @@ export default function Page() {
       </section>
 
       <footer style={{background:'#0A0A0D',borderTop:'1px solid rgba(167,92,67,.08)',padding:'56px clamp(24px,5vw,80px) 36px'}}>
-        <div className="fg" style={{maxWidth:1400,margin:'0 auto',display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:40}}>
+        <div className="dg fg" style={{maxWidth:1400,margin:'0 auto',display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:40}}>
           <div><div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:28,fontWeight:600,color:C.a1}}>TASTE OF ART</div><p style={{fontSize:12,color:'rgba(244,239,229,.35)',marginTop:8,lineHeight:1.7}}>A KHG HugLife Event. Art meets appetite.</p></div>
           <div><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',color:C.a1,marginBottom:16}}>EVENT</div>{['Experience','Tickets'].map(l=><div key={l} style={{fontSize:12,color:'rgba(244,239,229,.35)',marginBottom:8}}>{l}</div>)}</div>
           <div><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',color:C.a1,marginBottom:16}}>CONNECT</div>{['@just.huglife','404.819.9609'].map(l=><div key={l} style={{fontSize:12,color:'rgba(244,239,229,.35)',marginBottom:8}}>{l}</div>)}</div>
