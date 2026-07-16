@@ -1,42 +1,49 @@
+import './globals.css';
+
+const TICKETS = 'https://www.eventbrite.com/e/taste-of-art-art-show-iii-tickets-1985847798222';
+const EVENT_IMAGE = 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1180619722%2F2574990468831%2F1%2Foriginal.20260324-235554?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1920%2C1080&s=885ab80ee19fec1e7839b2d7a1d98c2c';
+
 export const metadata = {
-  title: 'TASTE OF ART | A Night of Art, Elegance & Social Energy · Atlanta',
-  description: 'Art meets culinary craft. Live painting, gourmet bites, live jazz. A KHG HugLife Event.',
+  metadataBase: new URL('https://thatasteofart.com'),
+  title: 'Taste of Art: Art Show III | Atlanta · August 22, 2026',
+  description: 'Three courses. Three live art installations. One unforgettable evening where the canvas meets the plate.',
   openGraph: {
-    title: 'TASTE OF ART | Art Meets Culinary Craft',
-    description: 'An immersive experience where art and food collide. Curated artists, curated chefs, curated nights.',
-    url: 'https://tasteofart.com',
+    title: 'Taste of Art: Art Show III',
+    description: 'Art, food, music, and atmosphere collide in Atlanta on August 22, 2026.',
+    url: 'https://thatasteofart.com',
+    siteName: 'Taste of Art',
     type: 'website',
-    images: ['https://dzlmtvodpyhetvektfuo.supabase.co/storage/v1/object/public/brand-graphics/taste_of_art/01_logos/TASTE_OF_ART_LOGO.png'],
+    images: [{ url: EVENT_IMAGE, width: 940, height: 991, alt: 'Taste of Art: Art Show III' }],
   },
-}
+  twitter: { card: 'summary_large_image', title: 'Taste of Art: Art Show III', description: 'Where the canvas meets the plate. Atlanta · August 22, 2026.', images: [EVENT_IMAGE] },
+};
+
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Taste of Art: Art Show III',
+  description: 'Three courses. Three live art installations. One unforgettable evening where the canvas meets the plate.',
+  url: 'https://thatasteofart.com',
+  image: EVENT_IMAGE,
+  startDate: '2026-08-22T19:00:00-04:00',
+  endDate: '2026-08-23T01:00:00-04:00',
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: { '@type': 'Place', name: 'Location to be announced', address: { '@type': 'PostalAddress', addressLocality: 'Atlanta', addressRegion: 'GA', addressCountry: 'US' } },
+  organizer: { '@type': 'Organization', name: 'HugLife Events', url: 'https://www.eventbrite.com/o/good-times-121163507813' },
+  offers: { '@type': 'Offer', url: TICKETS, availability: 'https://schema.org/InStock', priceCurrency: 'USD' },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800;900&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Event",
-              "name": "Taste of Art",
-              "description": "An immersive experience where art and food collide. Curated artists, curated chefs, curated nights.",
-              "url": "https://tasteofart.com",
-              "image": "https://dzlmtvodpyhetvektfuo.supabase.co/storage/v1/object/public/brand-graphics/taste_of_art/01_logos/TASTE_OF_ART_LOGO.png",
-              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-              "location": {"@type": "Place", "name": "Atlanta, GA", "address": {"@type": "PostalAddress", "addressLocality": "Atlanta", "addressRegion": "GA"}},
-              "organizer": {"@type": "Organization", "name": "HugLife Events", "url": "https://huglife.com"},
-              "performer": {"@type": "Organization", "name": "Curated Local Artists & Chefs"}
-            })
-          }}
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
       </head>
-      <body style={{ margin: 0, padding: 0, background: '#080808' }}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }

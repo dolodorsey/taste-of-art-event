@@ -2,6 +2,6 @@
 const nextConfig = {
   images: { unoptimized: true },
   output: 'export',
-  eslint: { ignoreDuringBuilds: true },
+  turbopack: { root: __dirname },
 }
 module.exports = nextConfig
