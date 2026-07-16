@@ -1,0 +1,21 @@
+.feature-image,
+.program-image,
+.gallery-strip figure {
+  background-size: cover;
+  background-position: center 22%;
+  background-repeat: no-repeat;
+}
+
+.program-image {
+  filter: saturate(.88) contrast(1.05);
+}
+
+.gallery-strip figure {
+  filter: saturate(.78) brightness(.72);
+  transition: filter .4s ease, transform .7s ease;
+}
+
+.gallery-strip figure:hover {
+  filter: saturate(1) brightness(.9);
+  transform: scale(1.015);
+}

@@ -1,37 +1,37 @@
 import './globals.css';
+import './event-overrides.css';
 
-const TICKETS = 'https://www.eventbrite.com/e/taste-of-art-art-show-iii-tickets-1985847798222';
-const EVENT_IMAGE = 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1180619722%2F2574990468831%2F1%2Foriginal.20260324-235554?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1920%2C1080&s=885ab80ee19fec1e7839b2d7a1d98c2c';
+const EVENTBRITE = 'https://www.eventbrite.com/o/good-times-121163507813';
+const EVENT_IMAGE = 'https://doctordorsey.com/images/events/diaspora/taste-of-art.jpg';
 
 export const metadata = {
   metadataBase: new URL('https://thatasteofart.com'),
-  title: 'Taste of Art: Art Show III | Atlanta · August 22, 2026',
-  description: 'Three courses. Three live art installations. One unforgettable evening where the canvas meets the plate.',
+  title: 'Taste of Art at Diaspora in ATL | July 25, 2026',
+  description: 'Where culture meets canvas. Experience Taste of Art inside Diaspora in ATL at Morris Brown College on July 25, 2026.',
   openGraph: {
-    title: 'Taste of Art: Art Show III',
-    description: 'Art, food, music, and atmosphere collide in Atlanta on August 22, 2026.',
+    title: 'Taste of Art at Diaspora in ATL',
+    description: 'A cultural art show inside Diaspora in ATL at Morris Brown College on July 25, 2026.',
     url: 'https://thatasteofart.com',
     siteName: 'Taste of Art',
     type: 'website',
-    images: [{ url: EVENT_IMAGE, width: 940, height: 991, alt: 'Taste of Art: Art Show III' }],
+    images: [{ url: EVENT_IMAGE, width: 958, height: 1200, alt: 'Taste of Art at Diaspora in ATL' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Taste of Art: Art Show III', description: 'Where the canvas meets the plate. Atlanta · August 22, 2026.', images: [EVENT_IMAGE] },
+  twitter: { card: 'summary_large_image', title: 'Taste of Art at Diaspora in ATL', description: 'Where culture meets canvas. July 25 at Morris Brown College.', images: [EVENT_IMAGE] },
 };
 
 const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
-  name: 'Taste of Art: Art Show III',
-  description: 'Three courses. Three live art installations. One unforgettable evening where the canvas meets the plate.',
+  name: 'Taste of Art at Diaspora in ATL',
+  description: 'A cultural art show inside the Diaspora in ATL Music & Food Festival.',
   url: 'https://thatasteofart.com',
   image: EVENT_IMAGE,
-  startDate: '2026-08-22T19:00:00-04:00',
-  endDate: '2026-08-23T01:00:00-04:00',
+  startDate: '2026-07-25T17:00:00-04:00',
   eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  location: { '@type': 'Place', name: 'Location to be announced', address: { '@type': 'PostalAddress', addressLocality: 'Atlanta', addressRegion: 'GA', addressCountry: 'US' } },
+  location: { '@type': 'Place', name: 'Morris Brown College', address: { '@type': 'PostalAddress', addressLocality: 'Atlanta', addressRegion: 'GA', addressCountry: 'US' } },
   organizer: { '@type': 'Organization', name: 'HugLife Events', url: 'https://www.eventbrite.com/o/good-times-121163507813' },
-  offers: { '@type': 'Offer', url: TICKETS, availability: 'https://schema.org/InStock', priceCurrency: 'USD' },
+  offers: { '@type': 'Offer', url: EVENTBRITE, availability: 'https://schema.org/InStock', priceCurrency: 'USD' },
 };
 
 export default function RootLayout({ children }) {
