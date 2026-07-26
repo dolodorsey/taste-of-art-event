@@ -1,3 +1,5 @@
+import DirectFormLinks from './DirectFormLinks';
+
 const EVENTBRITE = 'https://www.eventbrite.com/o/good-times-121163507813';
 const DIASPORA_IMAGE = 'https://doctordorsey.com/images/events/diaspora/taste-of-art.jpg';
 const galleryImages = [
@@ -134,6 +136,7 @@ export default function Page() {
         <h2>Enter the<br /><em>experience.</em></h2>
         <p>Saturday, July 25 · 5 PM · Morris Brown College</p>
         <a className="button button-primary" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View festival on Eventbrite <span>↗</span></a>
+        <DirectFormLinks brandSlug="taste-of-art" />
         <small>Atlanta, Georgia · Inside the Diaspora in ATL Music & Food Festival</small>
       </section>
 
@@ -156,7 +159,7 @@ export default function Page() {
         <div className="footer-top">
           <div><span className="brand-mark">T/A</span><h2>Taste of Art</h2><p>Where culture meets canvas.</p></div>
           <div><span>Experience</span><a href="#experience">The concept</a><a href="#program">Program</a><a href="#faq">FAQ</a></div>
-          <div><span>Connect</span><a href="https://instagram.com/thetasteofart" target="_blank" rel="noopener noreferrer">@thetasteofart</a><a href="https://instagram.com/just.huglife" target="_blank" rel="noopener noreferrer">@just.huglife</a></div>
+          <div><span>Connect</span><a href="https://instagram.com/thetasteofart" target="_blank" rel="noopener noreferrer">@thetasteofart</a><a href="https://instagram.com/just.huglife" target="_blank" rel="noopener noreferrer">@just.huglife</a><a href="https://khg-forms.vercel.app/events/taste-of-art" target="_blank" rel="noopener noreferrer">Event forms</a></div>
         </div>
         <div className="footer-bottom"><span>© 2026 Taste of Art</span><span>A HugLife Events production · The Kollective Hospitality Group</span></div>
       </footer>
