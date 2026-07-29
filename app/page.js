@@ -19,11 +19,11 @@ const chapters = [
 ];
 
 const faqs = [
-  ['When is Taste of Art?', 'Saturday, July 25, 2026, beginning at 5:00 PM as part of Diaspora in ATL.'],
-  ['Where is the event?', 'Morris Brown College in Atlanta, Georgia. Taste of Art is located inside the Diaspora in ATL Music & Food Festival.'],
-  ['What does admission include?', 'Taste of Art is part of the larger Diaspora in ATL festival experience, alongside live music, food, fashion, dance, marketplace activations, and community programming.'],
-  ['What should I wear?', 'Come festival-ready and expressive. Cultural style, color, and camera-ready looks are encouraged.'],
-  ['Can artists participate?', 'Artist and marketplace opportunities are announced through @thetasteofart and @just.huglife.'],
+  ['When is the next Taste of Art?', 'The July 25, 2026 event window has passed. The next city, venue, and date will be published after production is confirmed.'],
+  ['Where was the 2026 edition planned?', 'The 2026 edition was programmed at Morris Brown College in Atlanta as part of Diaspora in ATL.'],
+  ['Where can I find the archive?', 'The archive page will collect confirmed documentation, participating artists, credits, and approved media as it becomes available.'],
+  ['Can artists participate?', 'Artists and makers can register interest through the live forms for future editions. Selection depends on curatorial fit, readiness, space, and production requirements.'],
+  ['Can organizations partner?', 'Yes. Institutions, brands, venues, media, hospitality operators, funders, and community organizations can submit a partnership inquiry.'],
 ];
 
 export default function Page() {
@@ -35,11 +35,13 @@ export default function Page() {
           <span>Taste of Art</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#experience">Experience</a>
-          <a href="#program">Program</a>
-          <a href="#faq">FAQ</a>
+          <a href="/about">About</a>
+          <a href="/experience">Experience</a>
+          <a href="/artists">Artists</a>
+          <a href="/gallery">Archive</a>
+          <a href="/future">Future</a>
         </nav>
-        <a className="header-ticket" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">Eventbrite <span>↗</span></a>
+        <a className="header-ticket" href="/future">Future editions <span>↗</span></a>
       </header>
 
       <section className="hero" id="top">
@@ -50,12 +52,12 @@ export default function Page() {
           <h1><span>Taste</span><small>of</small><span className="accent">Art</span></h1>
           <p className="hero-thesis">Where culture meets canvas.</p>
           <div className="hero-details" aria-label="Event details">
-            <div><strong>July 25</strong><span>Saturday · 2026</span></div>
-            <div><strong>5 PM</strong><span>Morris Brown College · Atlanta</span></div>
+            <div><strong>2026</strong><span>Edition archive</span></div>
+            <div><strong>Next</strong><span>Edition in development</span></div>
           </div>
           <div className="hero-actions">
-            <a className="button button-primary" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View on Eventbrite <span>↗</span></a>
-            <a className="text-link" href="#experience">Enter the experience <span>↓</span></a>
+            <a className="button button-primary" href="/gallery">View the archive <span>↗</span></a>
+            <a className="text-link" href="/future">Shape the next edition <span>↗</span></a>
           </div>
         </div>
         <p className="hero-side-note">Taste of Art × Diaspora in ATL</p>
@@ -64,8 +66,8 @@ export default function Page() {
       <section className="number-rail" aria-label="Experience overview">
         <div><strong>1</strong><span>Cultural art show</span></div>
         <div><strong>LIVE</strong><span>Artist experiences</span></div>
-        <div><strong>ATL</strong><span>Morris Brown College</span></div>
-        <div><strong>5 PM</strong><span>Festival opening</span></div>
+        <div><strong>ATL</strong><span>2026 edition</span></div>
+        <div><strong>NEXT</strong><span>In development</span></div>
       </section>
 
       <section className="manifesto section" id="experience">
@@ -132,10 +134,10 @@ export default function Page() {
 
       <section className="ticket-section section" id="tickets">
         <div className="ticket-emblem" aria-hidden="true">T/A</div>
-        <p className="eyebrow">Part of Diaspora in ATL</p>
-        <h2>Enter the<br /><em>experience.</em></h2>
-        <p>Saturday, July 25 · 5 PM · Morris Brown College</p>
-        <a className="button button-primary" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View festival on Eventbrite <span>↗</span></a>
+        <p className="eyebrow">Current focus</p>
+        <h2>Archive 2026.<br /><em>Build what is next.</em></h2>
+        <p>Artist records · approved media · future-edition planning</p>
+        <a className="button button-primary" href="/gallery">Open the archive <span>↗</span></a>
         <DirectFormLinks brandSlug="taste-of-art" />
         <small>Atlanta, Georgia · Inside the Diaspora in ATL Music & Food Festival</small>
       </section>
@@ -158,13 +160,13 @@ export default function Page() {
       <footer>
         <div className="footer-top">
           <div><span className="brand-mark">T/A</span><h2>Taste of Art</h2><p>Where culture meets canvas.</p></div>
-          <div><span>Experience</span><a href="#experience">The concept</a><a href="#program">Program</a><a href="#faq">FAQ</a></div>
+          <div><span>Experience</span><a href="/about">About</a><a href="/experience">Experience</a><a href="/artists">Artists</a><a href="/gallery">Archive</a></div>
           <div><span>Connect</span><a href="https://instagram.com/thetasteofart" target="_blank" rel="noopener noreferrer">@thetasteofart</a><a href="https://instagram.com/just.huglife" target="_blank" rel="noopener noreferrer">@just.huglife</a><a href="https://khg-forms.vercel.app/events/taste-of-art" target="_blank" rel="noopener noreferrer">Event forms</a></div>
         </div>
         <div className="footer-bottom"><span>© 2026 Taste of Art</span><span>A HugLife Events production · The Kollective Hospitality Group</span></div>
       </footer>
 
-      <a className="mobile-ticket" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View Eventbrite <span>↗</span></a>
+      <a className="mobile-ticket" href="/future">Future editions <span>↗</span></a>
     </main>
   );
 }
