@@ -1,37 +1,35 @@
 import './globals.css';
 import './event-overrides.css';
+import './a11y.css';
+import { Analytics } from '@vercel/analytics/next';
 
-const EVENTBRITE = 'https://www.eventbrite.com/o/good-times-121163507813';
 const EVENT_IMAGE = 'https://doctordorsey.com/images/events/diaspora/taste-of-art.jpg';
 
 export const metadata = {
   metadataBase: new URL('https://thatasteofart.com'),
-  title: 'Taste of Art at Diaspora in ATL | July 25, 2026',
-  description: 'Where culture meets canvas. Experience Taste of Art inside Diaspora in ATL at Morris Brown College on July 25, 2026.',
+  title: 'Taste of Art — Where Culture Meets Canvas',
+  description: 'Atlanta’s living gallery of visual art, cultural storytelling, live creativity, and community. Join the next Taste of Art edition.',
+  alternates: { canonical: '/' },
   openGraph: {
-    title: 'Taste of Art at Diaspora in ATL',
-    description: 'A cultural art show inside Diaspora in ATL at Morris Brown College on July 25, 2026.',
+    title: 'Taste of Art — Where Culture Meets Canvas',
+    description: 'Enter Atlanta’s living gallery and get first access to the next edition.',
     url: 'https://thatasteofart.com',
     siteName: 'Taste of Art',
     type: 'website',
     images: [{ url: EVENT_IMAGE, width: 958, height: 1200, alt: 'Taste of Art at Diaspora in ATL' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Taste of Art at Diaspora in ATL', description: 'Where culture meets canvas. July 25 at Morris Brown College.', images: [EVENT_IMAGE] },
+  twitter: { card: 'summary_large_image', title: 'Taste of Art — Where Culture Meets Canvas', description: 'Get first access to the next Atlanta edition.', images: [EVENT_IMAGE] },
+  robots: { index: true, follow: true },
 };
 
-const eventSchema = {
+const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Event',
-  name: 'Taste of Art at Diaspora in ATL',
-  description: 'A cultural art show inside the Diaspora in ATL Music & Food Festival.',
+  '@type': 'Organization',
+  name: 'Taste of Art',
+  description: 'A living cultural art experience produced in Atlanta.',
   url: 'https://thatasteofart.com',
-  image: EVENT_IMAGE,
-  startDate: '2026-07-25T17:00:00-04:00',
-  eventStatus: 'https://schema.org/EventScheduled',
-  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  location: { '@type': 'Place', name: 'Morris Brown College', address: { '@type': 'PostalAddress', addressLocality: 'Atlanta', addressRegion: 'GA', addressCountry: 'US' } },
-  organizer: { '@type': 'Organization', name: 'HugLife Events', url: 'https://www.eventbrite.com/o/good-times-121163507813' },
-  offers: { '@type': 'Offer', url: EVENTBRITE, availability: 'https://schema.org/InStock', priceCurrency: 'USD' },
+  logo: EVENT_IMAGE,
+  sameAs: ['https://instagram.com/thetasteofart'],
 };
 
 export default function RootLayout({ children }) {
@@ -41,9 +39,13 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#main-content">Skip to main content</a>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

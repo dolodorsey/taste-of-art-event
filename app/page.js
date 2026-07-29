@@ -1,6 +1,6 @@
 import DirectFormLinks from './DirectFormLinks';
 
-const EVENTBRITE = 'https://www.eventbrite.com/o/good-times-121163507813';
+const NEXT_EDITION = '/rsvp';
 const DIASPORA_IMAGE = 'https://doctordorsey.com/images/events/diaspora/taste-of-art.jpg';
 const galleryImages = [
   DIASPORA_IMAGE,
@@ -19,16 +19,16 @@ const chapters = [
 ];
 
 const faqs = [
-  ['When is Taste of Art?', 'Saturday, July 25, 2026, beginning at 5:00 PM as part of Diaspora in ATL.'],
-  ['Where is the event?', 'Morris Brown College in Atlanta, Georgia. Taste of Art is located inside the Diaspora in ATL Music & Food Festival.'],
-  ['What does admission include?', 'Taste of Art is part of the larger Diaspora in ATL festival experience, alongside live music, food, fashion, dance, marketplace activations, and community programming.'],
+  ['When is the next Taste of Art?', 'The next edition is being curated now. Join the priority list for the date, venue, artist announcements, and first access.'],
+  ['What was the 2026 edition?', 'Taste of Art appeared inside Diaspora in ATL at Morris Brown College on July 25, 2026.'],
+  ['What does the experience include?', 'Each edition brings visual art, live creation, cultural storytelling, artist connection, marketplace activations, and community programming into one living gallery.'],
   ['What should I wear?', 'Come festival-ready and expressive. Cultural style, color, and camera-ready looks are encouraged.'],
   ['Can artists participate?', 'Artist and marketplace opportunities are announced through @thetasteofart and @just.huglife.'],
 ];
 
 export default function Page() {
   return (
-    <main>
+    <main id="main-content">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Taste of Art home">
           <span className="brand-mark">T/A</span>
@@ -39,7 +39,7 @@ export default function Page() {
           <a href="#program">Program</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a className="header-ticket" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">Eventbrite <span>↗</span></a>
+        <a className="header-ticket" href={NEXT_EDITION}>Join the priority list <span>→</span></a>
       </header>
 
       <section className="hero" id="top">
@@ -50,11 +50,11 @@ export default function Page() {
           <h1><span>Taste</span><small>of</small><span className="accent">Art</span></h1>
           <p className="hero-thesis">Where culture meets canvas.</p>
           <div className="hero-details" aria-label="Event details">
-            <div><strong>July 25</strong><span>Saturday · 2026</span></div>
-            <div><strong>5 PM</strong><span>Morris Brown College · Atlanta</span></div>
+            <div><strong>Next</strong><span>Edition being curated</span></div>
+            <div><strong>ATL</strong><span>Artists · culture · community</span></div>
           </div>
           <div className="hero-actions">
-            <a className="button button-primary" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View on Eventbrite <span>↗</span></a>
+            <a className="button button-primary" href={NEXT_EDITION}>Get first access <span>→</span></a>
             <a className="text-link" href="#experience">Enter the experience <span>↓</span></a>
           </div>
         </div>
@@ -64,8 +64,8 @@ export default function Page() {
       <section className="number-rail" aria-label="Experience overview">
         <div><strong>1</strong><span>Cultural art show</span></div>
         <div><strong>LIVE</strong><span>Artist experiences</span></div>
-        <div><strong>ATL</strong><span>Morris Brown College</span></div>
-        <div><strong>5 PM</strong><span>Festival opening</span></div>
+        <div><strong>ATL</strong><span>Born in Atlanta</span></div>
+        <div><strong>NEXT</strong><span>Edition in development</span></div>
       </section>
 
       <section className="manifesto section" id="experience">
@@ -76,7 +76,7 @@ export default function Page() {
           </div>
           <div className="manifesto-copy">
             <p className="lead">Taste of Art is where culture, heritage, and visual expression meet.</p>
-            <p>Inside Diaspora in ATL, artists transform the festival into a living gallery. Original work, cultural storytelling, live creativity, and community connection come together on the historic grounds of Morris Brown College.</p>
+            <p>Artists transform the room into a living gallery. Original work, cultural storytelling, live creativity, and community connection come together in an experience designed to be entered—not simply observed.</p>
           </div>
         </div>
         <div className="feature-frame">
@@ -85,7 +85,7 @@ export default function Page() {
             <span>Inside Diaspora in ATL</span>
             <h3>Culture on canvas.</h3>
             <p>Meet the artists, experience cultural storytelling, and discover original work while music, food, fashion, and community move around you.</p>
-            <a className="text-link" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View festival Eventbrite <span>↗</span></a>
+            <a className="text-link" href={NEXT_EDITION}>Join the next chapter <span>→</span></a>
           </div>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function Page() {
             <span>Festival setting</span>
             <p>Live music · Global food<br />Fashion · Dance · Community</p>
           </div>
-          <p className="program-note">The complete artist roster and activation schedule will be announced through Taste of Art and Diaspora in ATL.</p>
+          <p className="program-note">The next artist roster, venue, and activation schedule will be announced to the priority list and through Taste of Art.</p>
           <a className="social-link" href="https://instagram.com/thetasteofart" target="_blank" rel="noopener noreferrer">Follow @thetasteofart <span>↗</span></a>
         </div>
       </section>
@@ -132,12 +132,12 @@ export default function Page() {
 
       <section className="ticket-section section" id="tickets">
         <div className="ticket-emblem" aria-hidden="true">T/A</div>
-        <p className="eyebrow">Part of Diaspora in ATL</p>
+        <p className="eyebrow">The next canvas is opening</p>
         <h2>Enter the<br /><em>experience.</em></h2>
-        <p>Saturday, July 25 · 5 PM · Morris Brown College</p>
-        <a className="button button-primary" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View festival on Eventbrite <span>↗</span></a>
+        <p>Join the priority list for the next date, venue, artists, and first access.</p>
+        <a className="button button-primary" href={NEXT_EDITION}>Join the priority list <span>→</span></a>
         <DirectFormLinks brandSlug="taste-of-art" />
-        <small>Atlanta, Georgia · Inside the Diaspora in ATL Music & Food Festival</small>
+        <small>Atlanta, Georgia · Artists, partners, and culture builders welcome</small>
       </section>
 
       <section className="faq section" id="faq">
@@ -159,12 +159,12 @@ export default function Page() {
         <div className="footer-top">
           <div><span className="brand-mark">T/A</span><h2>Taste of Art</h2><p>Where culture meets canvas.</p></div>
           <div><span>Experience</span><a href="#experience">The concept</a><a href="#program">Program</a><a href="#faq">FAQ</a></div>
-          <div><span>Connect</span><a href="https://instagram.com/thetasteofart" target="_blank" rel="noopener noreferrer">@thetasteofart</a><a href="https://instagram.com/just.huglife" target="_blank" rel="noopener noreferrer">@just.huglife</a><a href="https://khg-forms.vercel.app/events/taste-of-art" target="_blank" rel="noopener noreferrer">Event forms</a></div>
+          <div><span>Connect</span><a href="/rsvp">First access</a><a href="/contact">Artists, vendors & sponsors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/accessibility">Accessibility</a></div>
         </div>
         <div className="footer-bottom"><span>© 2026 Taste of Art</span><span>A HugLife Events production · The Kollective Hospitality Group</span></div>
       </footer>
 
-      <a className="mobile-ticket" href={EVENTBRITE} target="_blank" rel="noopener noreferrer">View Eventbrite <span>↗</span></a>
+      <a className="mobile-ticket" href={NEXT_EDITION}>Get first access <span>→</span></a>
     </main>
   );
 }
